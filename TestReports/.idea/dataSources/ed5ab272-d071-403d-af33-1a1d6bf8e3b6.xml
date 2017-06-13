@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="spring_db@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.1">
+    <root id="1"/>
+    <database id="2" parent="1" name="spring_db">
+      <ObjectId>41766</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2017-06-12.21:38:59.434</IntrospectionTimestamp>
+      <IntrospectionStateNumber>3549</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="4" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="5" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="6" parent="2" name="pg_temp_1">
+      <ObjectId>11320</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11321</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="information_schema">
+      <ObjectId>11585</ObjectId>
+    </schema>
+    <sequence id="9" parent="3" name="hibernate_sequence">
+      <ObjectId>50818</ObjectId>
+      <StateNumber>3548</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <table id="10" parent="3" name="customer2">
+      <ObjectId>50098</ObjectId>
+      <StateNumber>3157</StateNumber>
+    </table>
+    <table id="11" parent="3" name="report">
+      <ObjectId>50820</ObjectId>
+      <StateNumber>3549</StateNumber>
+    </table>
+    <table id="12" parent="3" name="role">
+      <ObjectId>50604</ObjectId>
+      <StateNumber>3416</StateNumber>
+    </table>
+    <table id="13" parent="3" name="users">
+      <ObjectId>50609</ObjectId>
+      <StateNumber>3416</StateNumber>
+    </table>
+    <column id="14" parent="10" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3157</StateNumber>
+    </column>
+    <column id="15" parent="10" name="firstname">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>3157</StateNumber>
+    </column>
+    <column id="16" parent="10" name="lastname">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>3157</StateNumber>
+    </column>
+    <index id="17" parent="10" name="customer2_pkey">
+      <ObjectId>50104</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="18" parent="10" name="customer2_pkey">
+      <ObjectId>50105</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>customer2_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="19" parent="11" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3549</StateNumber>
+    </column>
+    <column id="20" parent="11" name="activity">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>3549</StateNumber>
+    </column>
+    <column id="21" parent="11" name="enddate">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+      <StateNumber>3549</StateNumber>
+    </column>
+    <column id="22" parent="11" name="performer">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>3549</StateNumber>
+    </column>
+    <column id="23" parent="11" name="startdate">
+      <Position>5</Position>
+      <DataType>date|0</DataType>
+      <StateNumber>3549</StateNumber>
+    </column>
+    <index id="24" parent="11" name="report_pkey">
+      <ObjectId>50826</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="25" parent="11" name="report_pkey">
+      <ObjectId>50827</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>report_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="26" parent="12" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3413</StateNumber>
+    </column>
+    <column id="27" parent="12" name="role">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>3413</StateNumber>
+    </column>
+    <index id="28" parent="12" name="role_pkey">
+      <ObjectId>50607</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="29" parent="12" name="role_pkey">
+      <ObjectId>50608</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>role_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="30" parent="13" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3414</StateNumber>
+    </column>
+    <column id="31" parent="13" name="city">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>3414</StateNumber>
+    </column>
+    <column id="32" parent="13" name="country">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>3414</StateNumber>
+    </column>
+    <column id="33" parent="13" name="email">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>3414</StateNumber>
+    </column>
+    <column id="34" parent="13" name="login">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>3414</StateNumber>
+    </column>
+    <column id="35" parent="13" name="name">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>3414</StateNumber>
+    </column>
+    <column id="36" parent="13" name="number">
+      <Position>7</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>3414</StateNumber>
+    </column>
+    <column id="37" parent="13" name="password">
+      <Position>8</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>3414</StateNumber>
+    </column>
+    <column id="38" parent="13" name="role_id">
+      <Position>9</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>3414</StateNumber>
+    </column>
+    <index id="39" parent="13" name="users_pkey">
+      <ObjectId>50615</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="40" parent="13" name="ukbixqcm4yw7tcyx6ptw2i7iuvv">
+      <ObjectId>50617</ObjectId>
+      <ColNames>login
+email</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="41" parent="13" name="users_pkey">
+      <ObjectId>50616</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="42" parent="13" name="ukbixqcm4yw7tcyx6ptw2i7iuvv">
+      <ObjectId>50618</ObjectId>
+      <ColNames>login
+email</ColNames>
+      <UnderlyingIndexName>ukbixqcm4yw7tcyx6ptw2i7iuvv</UnderlyingIndexName>
+    </key>
+    <foreign-key id="43" parent="13" name="fk4qu1gr772nnf6ve5af002rwya">
+      <ObjectId>50619</ObjectId>
+      <ColNames>role_id</ColNames>
+      <RefTableName>role</RefTableName>
+      <RefKeyName>role_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>

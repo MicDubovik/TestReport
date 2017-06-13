@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <link data-require="bootstrap@*" data-semver="4.0.5" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+    <script data-require="bootstrap@*" data-semver="4.0.5" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+    <script data-require="angular.js@*" data-semver="4.0.0" src="https://code.angularjs.org/latest/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        [data-container="ref"] {
+            position: absolute;
+            top: 50%;
+            text-align: center;
+            width: 100%;
+        }
+
+        body {
+            background: url('http://beloweb.ru/wp-content/uploads/2014/04/123456730.jpg') no-repeat fixed center;
+            -moz-background-size: 100%;
+            -webkit-background-size: 100%;
+            -o-background-size: 100%;
+            background-size: 100%;
+        }
+
+    </style>
+</head>
+
+<body class="text-center well">
+<div id="tasksPanel" class="panel panel-primary" ng-controller="studyCtrl">
+    <div class="panel-heading">
+        <div class="panel-title">
+            <h2> </h2>
+        </div>
+    </div>
+
+    <h1 style="color:blue;">Thank's for your vote!</h1>
+</div>
+
+<div data-element="card">
+    <div data-container="ref"><h3><a href="/view">Click for view result. </a></h3></div>
+</div>
+
+
+</body>
+
+</html>
