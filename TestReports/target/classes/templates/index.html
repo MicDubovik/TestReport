@@ -8,6 +8,8 @@
     <script type="text/javascript" src="/static/app/app.module.js" th:src="@{/app/app.module.js}"></script>
     <script type="text/javascript" src="/static/app/books.controller.js" th:src="@{/app/books.controller.js}"></script>
 
+
+
 </head>
 <body ng-app="app" ng-controller="BookCtrl as bc">
 
@@ -26,47 +28,40 @@
         <div class="form-group">
             <label class="control-label col-sm-2" >Start Date:</label>
             <div class="col-sm-4">
-                <input type="date" class="form-control" id="titleStart" placeholder="MMM dd,yyyy" ng-model="report.startdate" value="{{report.startdate | date:'MMM dd,yyyy' }}"/>
+                <input type="date" class="form-control" id="StartDate"  ng-model="bc.report.startdate" />
 
             </div>
+
         </div>
         <div class="form-group">
             <label class="control-label col-sm-2" >End Date:</label>
             <div class="col-sm-4">
-                <input type="date" class="form-control" id="titleEnd" placeholder="Enter End Date" ng-model="report.enddate"/>
+                <input type="date" class="form-control" id="EndDate"  ng-model="bc.report.enddate"/>
             </div>
         </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2" >Select performer</label>
-                <div class="col-sm-4">
-                    <select class="form-control" id="sel12" ng-model="report.performer">
-                        <option ng-repeat="performer in bc.performers" >{{performer.performer}}</option>
-                        <option>All performers</option>
-                    </select>
-                </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" >Select performer</label>
+            <div class="col-sm-4">
+                <select class="form-control" id="sel12" ng-model="bc.report.performer" ng-init="bc.report.performer='All performers'">
+                    <option ng-repeat="performer in bc.performers" >{{performer.performer}}</option>
+                    <option value="All performers" >All performers</option>
+                </select>
             </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" >Select period</label>
+            <div class="col-sm-4">
+                <select class="form-control" id="selector" ng-model="period" ng-change="bc.setDate(period)" ng-init="period='All time'">
 
-        <!--<div class="form-group">-->
-            <!--<label class="control-label col-sm-2" >Select period</label>-->
-                <!--<div class="col-sm-4">-->
-                    <!--&lt;!&ndash;<select class="form-control" id="sel1" ng-model="selected" onchange="bc.setLQ">&ndash;&gt;-->
-                    <!--<select id="Ultra" ng-model="time" >-->
-
-                        <!--<option >&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</option>-->
-                        <!--<option value="2013-08-01">Last qtr</option>-->
-                        <!--<option value="2013-08-01">Last month</option>-->
-                        <!--<option value="2013-08-01">Last calendar year </option>-->
-                        <!--<option value="2014-08-01">Current year to date</option>-->
-                        <!--<option value="2015-08-01">Current qtr to date</option>-->
-                        <!--<option value="curM">Current month to date</option>-->
-                    <!--</select>-->
-                <!--</div>-->
-
-        <!--</div>-->
+                    <option ng-repeat="period in bc.periods" >{{period.action}}</option>
+                    <option>All time</option>
+                </select>
+            </div>
+        </div>
 
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-default" ng-click="bc.getByDate(report);hide=false" >Find</button>
+                <button type="submit" class="btn btn-default" ng-click="bc.getByDate(bc.report);hide=false" >Find</button>
 
             </div>
         </div>

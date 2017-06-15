@@ -28,7 +28,7 @@ public class LogController {
         return repository.findAll();
     }
 
-    @RequestMapping(value = "/date", method = RequestMethod.POST)
+    @RequestMapping(value = "/date",method = RequestMethod.POST)
     public List<Report> getByDate(@RequestBody Report report) {
         List<Report> result = null;
         String perforemer ;
